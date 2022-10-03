@@ -5,6 +5,7 @@ include_once "./settings/db.php";
 ob_start();
 
 $title = "Sports Warehouse Online";
+$showContactPage = false;
 
 $db = new DBAccess($dsn, $userName, $password);
 
@@ -15,14 +16,12 @@ $pdo = $db->connect();
 $stmt = $pdo->prepare($sql);
 $itemRows = $db->getRows($stmt);
 
-$sql = "SELECT categoryId, categoryName FROM category";
-$stmt = $pdo->prepare($sql);
-$categoryRows = $db->getRows($stmt);
-$activeCategory = 0;
+include "utility/categories.php";
+
 $productHeading = "Featured Products";
 
 include "./templates/view-products.html.php";
 
 $output = ob_get_clean();
 
-include "./templates/layout.html.php";
+include "./templates/site-layout.html.php";

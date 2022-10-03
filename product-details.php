@@ -5,6 +5,7 @@ include_once "./settings/db.php";
 ob_start();
 
 $title = "Products";
+$showContactPage = false;
 
 $db = new DBAccess($dsn, $userName, $password);
 $pdo = $db->connect();
@@ -16,13 +17,8 @@ if (isset($_GET["itemId"])) {
     $stmt->bindValue("itemId", $_GET["itemId"]);
     $itemRow = $db->getRow($stmt);
 
-    $activeCategory = 0;   //$_GET["categoryId"];
-    $sql = "SELECT categoryId, categoryName FROM category";
-    $stmt = $pdo->prepare($sql);
-    $categoryRows = $db->getRows($stmt);
-    // $sql = "SELECT categoryName FROM category WHERE categoryId = :categoryId";
-    // $stmt = $pdo->prepare($sql);
-    // $stmt->bindValue("categoryId", $_GET["categoryId"]);
+    include "utility/categories.php";
+
     $productHeading = "Product Detail";   //$itemRow["itemName"];
 }
 
@@ -30,4 +26,4 @@ include "./templates/product-details.html.php";
 
 $output = ob_get_clean();
 
-include "./templates/layout.html.php";
+include "./templates/site-layout.html.php";

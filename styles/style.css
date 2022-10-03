@@ -122,6 +122,15 @@ a {
   display: none;
 }
 
+.nil-results {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 150px;
+  margin: 2em;
+  font-size: 16px;
+}
+
 .menu__toggle {
   margin-left: 0.3em;
   padding: 0.4em 0.8em;
@@ -621,6 +630,14 @@ a {
   margin-left: 20px;
 }
 
+.back-button,
+.back-button:active,
+.back-button:focus,
+.back-button:visited {
+  color: #00aced;
+  margin: 1em 1em 1em 2em;
+}
+
 .product-details__container {
   display: flex;
   flex-direction: column;
@@ -975,4 +992,68 @@ a {
   .site-footer p {
     margin: 0.2em;
   }
+}
+
+/* Forms */
+.contact-form {
+  padding: 0 4em 0 4em;
+}
+
+.contact-confirmation p {
+  margin-left: 4em;
+}
+
+.missing-fields {
+  margin: 0 0 0 5em;
+}
+
+.missing-fields p {
+  padding: 1em 0 1em 0em;
+  color: red;
+}
+
+.missing-fields li {
+  color: red;
+}
+
+fieldset p {
+  display: flex;
+  padding: 0.5em 0em;
+}
+
+label {
+  text-align: right;
+  margin: 0.6em 0.6em 0 0;
+  width: 300px;
+  padding: 0.2em;
+}
+
+input,
+select,
+textarea {
+  margin: 0.5em 0 0 0;
+}
+
+input,
+fieldset,
+textarea,
+select {
+  border: 1px solid #ccc;
+  padding: 0.4em;
+}
+
+legend {
+  color: #666;
+}
+
+input[type="submit"],
+input[type="radio"] {
+  margin-right: 20px;
+  width: 120px;
+}
+
+input[type="submit"] {
+  margin-bottom: 20px;
+  background-color: rgb(4, 172, 237);
+  border-radius: 5px;
 }

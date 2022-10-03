@@ -1,5 +1,6 @@
          <section class="product-details">
              <h3><?= $productHeading ?></h3>
+             <a class="back-button" href="<?php echo $_SERVER['HTTP_REFERER'] ?>">&lt; Back</a>
              <div class="product-details__container">
                  <div class="product-details__photoframe">
                      <img src="./assets/images/products/<?= $itemRow["photo"] ?>" alt="<?= $itemRow["itemName"] ?>" width="171" height="171" />

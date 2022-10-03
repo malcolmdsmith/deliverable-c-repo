@@ -1,5 +1,8 @@
          <section class="featured-products">
              <h3><?= $productHeading ?></h3>
+             <?php if (!$itemRows) : ?>
+                 <div class="nil-results">No results match search text.</div>
+             <?php endif; ?>
              <ul class="featured-products__items">
                  <?php foreach ($itemRows as $row) : ?>
                      <li class="featured-products__item">
