@@ -64,7 +64,7 @@ h3 {
   font-size: 18px;
   font-weight: 300;
   background-color: #ff690c;
-  margin: 27px 0 27px 10px;
+  margin: 0 0 14px 10px;
   padding-left: 1.3em;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -268,7 +268,7 @@ a {
   font-weight: 300;
 }
 
-#submit {
+#submitSearch {
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -565,8 +565,8 @@ a {
     margin: 0.4em 1.2em;
   }
 
-  .featured-products h3 {
-    margin: 22px 0 0 0;
+  .content h3 {
+    margin-left: 0;
   }
 }
 
@@ -635,7 +635,7 @@ a {
 .back-button:focus,
 .back-button:visited {
   color: #00aced;
-  margin: 1em 1em 1em 2em;
+  margin: 1em 1em 0 2em;
 }
 
 .product-details__container {
@@ -994,21 +994,28 @@ a {
   }
 }
 
+.contact-confirmation p {
+  min-height: 60px;
+  margin-left: 4em;
+}
+
+@media only screen and (min-width: 900px) {
+  .contact-confirmation h3 {
+    margin-left: 0;
+  }
+}
+
 /* Forms */
 .contact-form {
   padding: 0 4em 0 4em;
 }
 
-.contact-confirmation p {
-  margin-left: 4em;
-}
-
 .missing-fields {
-  margin: 0 0 0 5em;
+  margin: 0 0 1em 5em;
 }
 
 .missing-fields p {
-  padding: 1em 0 1em 0em;
+  padding: 0 0 1em 0em;
   color: red;
 }
 

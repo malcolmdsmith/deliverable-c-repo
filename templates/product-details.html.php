@@ -1,4 +1,4 @@
-         <section class="product-details">
+         <section class="content product-details">
              <h3><?= $productHeading ?></h3>
              <a class="back-button" href="<?php echo $_SERVER['HTTP_REFERER'] ?>">&lt; Back</a>
              <div class="product-details__container">

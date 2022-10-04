@@ -35,6 +35,8 @@
 //const menuToggle = document.querySelector("#menu-toggle");
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
+const submitContact = document.querySelector("#submitButton");
+const submitSearch = document.querySelector("#submitSearch");
 
 // Useful debugging technique - wrap variables in an object
 // console.log({menuToggle, menu})
@@ -76,3 +78,40 @@ if (menuToggle && menu) {
 // function menuToggleClick() {
 //   console.log("Stop clicking me!! 😱")
 // }
+
+if (submitContact) {
+  submitContact.addEventListener("click", function () {
+    setScroll();
+  });
+}
+
+if (submitSearch) {
+  submitSearch.addEventListener("click", function () {
+    localStorage.setItem("contentPos", "content");
+  });
+}
+
+function setScroll() {
+  let scroll = window.scrollY;
+  let scrollString = scroll.toString();
+  localStorage.setItem("scrollPosition", scrollString);
+}
+
+function restoreScrollPos() {
+  let posYString = localStorage.getItem("scrollPosition");
+  if (posYString) {
+    let posY = parseInt(posYString);
+    window.scroll(0, posY);
+    localStorage.removeItem("scrollPosition");
+    return true;
+  }
+
+  let contentPos = localStorage.getItem("contentPos");
+  if (contentPos) {
+    location.href = "#";
+    location.href = "#content";
+    return true;
+  }
+
+  return false;
+}

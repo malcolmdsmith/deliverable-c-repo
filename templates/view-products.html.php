@@ -1,4 +1,4 @@
-         <section class="featured-products">
+         <section class="content featured-products">
              <h3><?= $productHeading ?></h3>
              <?php if (!$itemRows) : ?>
                  <div class="nil-results">No results match search text.</div>

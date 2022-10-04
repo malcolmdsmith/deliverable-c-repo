@@ -18,10 +18,10 @@
   <script>
     document.documentElement.classList.remove("no-js");
   </script>
-  <script defer src="../scripts/app.min.js"></script>
+  <script defer src="scripts/app.js"></script>
 </head>
 
-<body>
+<body onload="restoreScrollPos()">
   <div class="menu-bar"></div>
   <div class="site-wrapper">
     <header>
@@ -48,7 +48,7 @@
           </li>
           <li class="menu__item">
             <i class="far fa-circle"></i>
-            <a class="menu__link" href="contact.php">Contact Us</a>
+            <a class="menu__link" href="contact.php#content">Contact Us</a>
             <div class="menu__divider"></div>
           </li>
           <li class="menu__item">
@@ -96,7 +96,7 @@
         <?php if (!$showContactPage) : ?>
           <form action="search-products.php" method="post">
             <input type="text" id="search-text" name="search-text" placeholder="Search Products" />
-            <button type="submit" id="submit" name="submit">
+            <button type="submit" id="submitSearch" name="submitSearch">
               <i class="fas fa-search"></i>
             </button>
           </form>
@@ -122,6 +122,7 @@
       </div>
     </div>
     <main>
+      <div id="content"></div>
       <?= $output ?>
 
       <section class="brands">

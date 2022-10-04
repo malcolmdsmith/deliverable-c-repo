@@ -13,7 +13,7 @@ $pdo = $db->connect();
 
 include "utility/categories.php";
 
-if (isset($_POST["submit"])  && isset($_POST["search-text"]) && strlen($_POST["search-text"]) > 0) {
+if (isset($_POST["submitSearch"])  && isset($_POST["search-text"]) && strlen($_POST["search-text"]) > 0) {
     $search = $_POST["search-text"];
     $sql = "SELECT itemId, itemName, photo, price, salePrice FROM item WHERE itemName Like :keywords || description Like :keywords";
 
