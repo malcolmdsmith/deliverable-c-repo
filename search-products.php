@@ -18,7 +18,7 @@ if (isset($_POST["submitSearch"])  && isset($_POST["search-text"]) && strlen($_P
     $sql = "SELECT itemId, itemName, photo, price, salePrice FROM item WHERE itemName Like :keywords || description Like :keywords";
 
     $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(":keywords", "%$search%",);
+    $stmt->bindValue(":keywords", "%$search%");
     $itemRows = $db->getRows($stmt);
 
     include "./templates/view-products.html.php";
