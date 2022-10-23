@@ -5,7 +5,6 @@ include_once "./settings/db.php";
 ob_start();
 
 $title = "Products";
-$showContactPage = false;
 
 $db = new DBAccess($dsn, $userName, $password);
 $pdo = $db->connect();

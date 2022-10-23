@@ -5,7 +5,6 @@ include_once "./settings/db.php";
 ob_start();
 
 $title = "Browse Products";
-$showContactPage = false;
 
 $db = new DBAccess($dsn, $userName, $password);
 $pdo = $db->connect();
@@ -23,6 +22,8 @@ if (isset($_GET["categoryId"])) {
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue("categoryId", $_GET["categoryId"]);
     $productHeading = $db->getValue($stmt);
+
+    $activeCategory = $_GET["categoryId"];
 }
 
 include "./templates/view-products.html.php";

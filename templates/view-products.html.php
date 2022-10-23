@@ -1,5 +1,5 @@
          <section class="content featured-products">
-             <h3><?= $productHeading ?></h3>
+             <h2><?= $productHeading ?></h2>
              <?php if (!$itemRows) : ?>
                  <div class="nil-results">No results match search text.</div>
              <?php endif; ?>

@@ -5,7 +5,6 @@ include_once "./settings/db.php";
 ob_start();
 
 $title = "Sports Warehouse Online";
-$showContactPage = false;
 
 $db = new DBAccess($dsn, $userName, $password);
 

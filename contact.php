@@ -7,7 +7,6 @@ $db = new DBAccess($dsn, $userName, $password);
 $pdo = $db->connect();
 
 $title = "Contact - Sports Warehouse Online Store";
-$showContactPage = true;
 $productHeading = "Contact Form";
 
 $requiredFields = ["firstName" => "First Name", "lastName" => "Last Name", "email" => "Email"];
@@ -18,7 +17,7 @@ ob_start();
 include "utility/categories.php";
 
 
-if (isset($_POST["submitButton"])) {
+if (isset($_POST["submitContact"])) {
     foreach ($requiredFields as $field => $description) {
         if (!isset($_POST[$field]) || !$_POST[$field]) {
             $missingFields[$field] = $description;

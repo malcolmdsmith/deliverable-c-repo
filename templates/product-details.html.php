@@ -1,5 +1,5 @@
          <section class="content product-details">
-             <h3><?= $productHeading ?></h3>
+             <h2><?= $productHeading ?></h2>
              <a class="back-button" href="<?php echo $_SERVER['HTTP_REFERER'] ?>">&lt; Back</a>
              <div class="product-details__container">
                  <div class="product-details__photoframe">
@@ -25,7 +25,7 @@
                              <?= $itemRow["description"] ?>
                          </li>
                      </ul>
-                     <a href="#">Add to Cart</a>
+                     <a href="#" class="product_details__buy-now">BUY NOW</a>
                  </div>
              </div>
          </section>

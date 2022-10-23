@@ -1,5 +1,5 @@
          <section class="content">
-         	<h3><?= $productHeading ?></h3>
+         	<h2><?= $productHeading ?></h2>
          	<form class="contact-form" action="contact.php" method="post">
          		<fieldset>
          			<legend> Contact Details - * required fields</legend>
@@ -32,7 +32,7 @@
 
          		</fieldset>
          		<p>
-         			<input type="submit" name="submitButton" id="submitButton" value="Send Details">
+         			<input type="submit" name="submitContact" id="submitContact" value="Send Details">
          		</p>
 
          	</form>

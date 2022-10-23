@@ -7,7 +7,7 @@ $pdo = $db->connect();
 
 
 $title = "Thank you!!";
-$showContactPage = false;
+$productHeading = "Confirmation";
 
 //start buffer
 ob_start();
