@@ -8,18 +8,24 @@ $title = "Sports Warehouse Online";
 
 $db = new DBAccess($dsn, $userName, $password);
 
-$sql = "SELECT itemId, itemName, photo, price, salePrice FROM item WHERE featured = true";
+$sql = "SELECT categoryName, itemId, itemName, photo, price, salePrice FROM item INNER JOIN category USING(categoryId) ORDER BY categoryName";
 
 $pdo = $db->connect();
 
 $stmt = $pdo->prepare($sql);
 $itemRows = $db->getRows($stmt);
 
+$sql = "SELECT count(*) as rowCount FROM item";
+$pdo = $db->connect();
+
+$stmt = $pdo->prepare($sql);
+$rowCount = $db->getValue($stmt);
+
 include "utility/categories.php";
 
-$productHeading = "Featured Products";
+$productHeading = "All Products";
 
-include "./templates/featured-products.html.php";
+include "./templates/view-products.html.php";
 
 $output = ob_get_clean();
 

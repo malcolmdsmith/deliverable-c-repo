@@ -26,7 +26,7 @@ if (isset($_GET["categoryId"])) {
     $activeCategory = $_GET["categoryId"];
 }
 
-include "./templates/view-products.html.php";
+include "./templates/featured-products.html.php";
 
 $output = ob_get_clean();
 

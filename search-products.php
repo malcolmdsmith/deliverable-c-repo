@@ -20,7 +20,7 @@ if (isset($_POST["submit"])  && isset($_POST["search-text"]) && strlen($_POST["s
     $stmt->bindValue(":keywords", "%$search%");
     $itemRows = $db->getRows($stmt);
 
-    include "./templates/view-products.html.php";
+    include "./templates/featured-products.html.php";
 }
 
 function setValue($fieldName)

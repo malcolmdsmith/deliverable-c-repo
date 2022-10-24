@@ -54,7 +54,7 @@
           </li>
           <li class="menu__item">
             <i class="far fa-circle"></i>
-            <a class="menu__link" href="#">View Products</a>
+            <a class="menu__link" href="view-products.php">View Products</a>
             <div class="menu__divider"></div>
           </li>
           <li class="menu__item sr-only">
